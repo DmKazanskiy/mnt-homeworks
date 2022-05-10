@@ -40,6 +40,7 @@
 Если всё отработало в рамках ожидания - выгрузить схемы workflow для импорта в XML. Файлы с workflow приложить к решению задания:
 > 
 > [workflow задач с типом Bug для импорта](xml/Bugs_WF.xml)
+> 
 > [workflow задач с типами Epic, Task для импорта](xml/Epic-Tasks_wf.xml)
 > 
 
