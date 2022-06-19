@@ -252,7 +252,7 @@ Finished: SUCCESS```
 
 8. Отправить ссылку на репозиторий в ответе
 
-> [Ссылка на репозиторий](https://github.com/DmKazanskiy/example-playbook)
+[Ссылка на репозиторий](https://github.com/DmKazanskiy/example-playbook)
 
 
 ## Необязательная часть
