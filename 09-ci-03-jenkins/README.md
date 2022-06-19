@@ -248,11 +248,13 @@ localhost                  : ok=5    changed=4    unreachable=0    failed=0    s
 [Pipeline] }
 [Pipeline] // node
 [Pipeline] End of Pipeline
-Finished: SUCCESS```
+Finished: SUCCESS
+
+```
 
 8. Отправить ссылку на репозиторий в ответе
 
-[Ссылка на репозиторий](https://github.com/DmKazanskiy/example-playbook)
+> [Ссылка на репозиторий](https://github.com/DmKazanskiy/example-playbook)
 
 
 ## Необязательная часть
