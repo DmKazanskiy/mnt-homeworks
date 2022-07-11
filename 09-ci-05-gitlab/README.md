@@ -137,8 +137,17 @@ test:
 	- docker exec $NET_NAME curl -s -X GET http://0.0.0.0:5290/rest/api/get_info | grep "Running" # get_info возвращает RUNNING  
 	only:  
       - main
-  
+
+```
+ 
+ 
+> 
+> ![](assets/TestSuccess20220711153549.png)
+> 
+
 ---  
+
+
   
 ### Как оформить ДЗ?  
   
