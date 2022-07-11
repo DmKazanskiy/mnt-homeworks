@@ -125,9 +125,18 @@ Cleaning up project directory and file based variables
 variables:  
   NET_NAME: "python-api"...  
 test:  
-  stage: test  needs: ["build&deploy"]  script:  
-    - docker pull $CI_REGISTRY_IMAGE/$NET_NAME    - docker run -d -p 5290:5290 --name python-api $CI_REGISTRY_IMAGE/$NET_NAME:latest sleep 40    - docker ps -a    - sleep 15    - docker exec $NET_NAME curl -s http://0.0.0.0:5290/rest/api/get_info | grep "Running"  only:  
-    - main```  
+  stage: test  
+  needs: ["build&deploy"]  
+  script:  
+    - sleep 10    
+	- docker run -id --rm -p 5290:5290 --name $NET_NAME $CI_REGISTRY_IMAGE/$NET_NAME:latest sleep 60 #--privileged    
+	- docker ps -a    
+	- docker exec $NET_NAME yum update #&& yum install -y net-tools    
+	- docker exec $NET_NAME yum install -y net-tools    
+	- docker exec $NET_NAME netstat -tulpn | grep "5290" # открыт порт 5290    
+	- docker exec $NET_NAME curl -s -X GET http://0.0.0.0:5290/rest/api/get_info | grep "Running" # get_info возвращает RUNNING  
+	only:  
+      - main
   
 ---  
   
